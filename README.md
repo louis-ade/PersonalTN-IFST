@@ -37,7 +37,7 @@ We need to give Terraform two pieces of information so it can do its job: your *
     ```bash
     export TAILSCALE_API_KEY="tskey-..." # Replace tskey-... with your API key
     ```
-3.  Open the `variables.tf` file in this project and update the `ssh_private_key_path` and `ssh_public_key_path` variables to point to your SSH key files.
+3.  Open the `variables.tf` file in this project and update the `ssh_public_key_path` variable to point to your SSH key file.
 
 
 ### Step 2: Deploy Your Infrastructure
@@ -53,7 +53,7 @@ Now for the fun part! Terraform will take care of the rest.
 
 ### Step 3: Connect to Your Servers
 
-Once Terraform is finished, it will print out the addresses and hostnames of your new VMs.
+Once Terraform is finished, it will print out the addresses of your new VMs.
 
 1.  **Install Tailscale** on your local computer from the [Tailscale downloads page](https://tailscale.com/download/).
 2.  Log in with the same account you used for the API key.
